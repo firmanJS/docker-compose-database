@@ -10,7 +10,7 @@
 ```sh
 cp .env-sample .env
 ```
-fill the environnment
+edit `.env` file and fill the environnment
 ```sh
 MYSQL_DATABASE= #database name
 MYSQL_USER= #mysql user
@@ -25,7 +25,7 @@ docker-compose -f docker-mysql.yml up --build
 ```sh
 cp .env-sample .env
 ```
-fill the environnment
+edit `.env` file and fill the environnment
 ```sh
 POSTGRES_DB= #postgres db name
 POSTGRES_USER= #postgres username
