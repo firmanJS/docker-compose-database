@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mysql_local_service:
+    image: mysql:5.7
+    container_name: mysql_local_service
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - '${MYSQL_PORT}:${MYSQL_PORT}'
+    volumes:
+      - mysql_vol_local:/var/lib/mysql
+# Names our volume
+volumes:
+  mysql_vol_local:

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  postgres_local_service:
+    image: postgres:11.2-alpine
+    env_file:
+      - .env
+    networks:
+      service_postgres_net_local:
+    ports:
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+    volumes:
+      - postgres_vol_local:/var/lib/postgresql/data
+
+networks:
+  service_postgres_net_local:
+
+volumes: 
+  postgres_vol_local:
