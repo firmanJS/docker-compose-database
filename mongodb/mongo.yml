@@ -12,7 +12,7 @@ services:
       - mongodb_local:/data/loca/db
       - mongodb_service_local_config:/data/local/configdb
     ports:
-      - ${MONGO_PORT}:${MONGO_PORT}
+      - 27017:27017
 
 #Docker Networks
 networks:
