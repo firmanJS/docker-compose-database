@@ -3,7 +3,7 @@
 ## list of docker compose database
 - [x] Mysql
 - [x] Postgresql
-- [ ] Mongodb
+- [x] Mongodb
 - [ ] Redis
 - [ ] Sqlite
 
@@ -37,4 +37,8 @@ POSTGRES_PORT= #postgres port
 ```
 ```sh
 docker-compose -f docker-postgres.yml up --build
+```
+3. go to folder mongodb open in your terminal 
+```sh
+docker-compose -f mongo.yml up --build
 ```
