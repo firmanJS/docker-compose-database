@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+  mongodb_local_service:
+    image: mongo:latest
+    container_name: mongodb_local_service
+    networks:
+      mongo_local_net:
+    env_file:
+      - .env
+    volumes:
+      - mongodb_local:/data/loca/db
+      - mongodb_service_local_config:/data/local/configdb
+    ports:
+      - ${MONGO_PORT}:${MONGO_PORT}
+
+#Docker Networks
+networks:
+  mongo_local_net:
+    driver: bridge
+
+#Volumes
+volumes:
+  mongodb_local:
+    driver: local
+  mongodb_service_local_config:
+    driver: local
