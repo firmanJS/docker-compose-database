@@ -2,8 +2,11 @@
 
 ## list of docker compose database
 
-- Mysql
-- Postgresql
+- [x] Mysql
+- [x] Postgresql
+- Mongodb
+- Redis
+- Sqlite
 
 ## how to use
 1. go to folder mysql open in your terminal 
