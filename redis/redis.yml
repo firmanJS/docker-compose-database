@@ -1,0 +1,24 @@
+version: '3'
+services:
+  redis:
+    image: redis:6-alpine3.13
+    container_name: redis_local
+    volumes:
+      - redis_vol_local:/var/lib/redis
+    # networks:
+    #  local_redis:
+    command: >
+          redis-server --appendonly yes --requirepass root
+    ports:
+      - "6379:6379"
+      
+# networks:
+  # local_redis:
+  
+volumes:
+  redis_vol_local:
+    driver: local
+    
+    
+# command
+# docker exec -it redis_local redis-cli
