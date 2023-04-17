@@ -1,0 +1,33 @@
+version: '3'
+services:
+  # default username password guest
+  rabbitmq_local:
+    image: rabbitmq:3-management-alpine
+    # hostname: rabbitmq-local
+    container_name: 'rabbitmq_local'
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: root
+      RABBITMQ_DEFAULT_PASS: root
+      # RABBITMQ_DEFAULT_VHOST: "/"
+    # labels:
+    #   NAME: "rabbitmq-local"
+    volumes:
+        - rabbitmq_local:/data/local/rabbitmq
+        - rabbitmq_local_config:/data/local/rabbitmq_config
+    # networks:
+        # - rabbitmq_local_net
+
+#Docker Networks
+networks:
+  rabbitmq_local_net:
+    driver: bridge
+
+#Volumes
+volumes:
+  rabbitmq_local:
+    driver: local
+  rabbitmq_local_config:
+    driver: local
