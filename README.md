@@ -4,8 +4,10 @@
 - [x] Mysql
 - [x] Postgresql
 - [x] Mongodb
-- [ ] Redis
-- [ ] Sqlite
+- [x] Redis
+- [x] Sqlite
+- [x] Elastic
+- [x] Rabbitmq
 
 ## how to use
 1. go to folder mysql open in your terminal 
